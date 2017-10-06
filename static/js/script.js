@@ -12,10 +12,15 @@ giphyViewModel = function(){
 
 
     // get JSON from aforementioned URL
-    $.getJSON(url, function(json){
-      var gifUrl = json.data[0].embed_url;
-      $('.gif-display').attr({'src': gifUrl});
-    });
+
+    $.ajax({
+      url: url,
+      dataType: 'json',
+      success: function(json){
+        var gifUrl = json.data[0].embed_url;
+        $('.gif-display').attr({'src': gifUrl});
+      }
+    })
 
 
   }
