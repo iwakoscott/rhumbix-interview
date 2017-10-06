@@ -8,17 +8,17 @@
   </head>
   <body>
 
-    <section class="container">
+    <section class="container main-box">
 
       <form data-bind="submit: getGif">
-        <input type="text" placeholder="Search Term" data-bind="textInput: searchTerm"/>
+        <input id="search" type="text" placeholder="Search Term" data-bind="textInput: searchTerm"/>
         <button type="submit"  class="btn btn-primary">GO</button>
       </form>
 
     </section>
 
     <!-- This is where the gif will be displayed -->
-    <section class="container">
+    <section class="container gif">
       <iframe  class="gif-display" src="" frameBorder="0" width="480" height="480"></iframe>
     </section>
 
