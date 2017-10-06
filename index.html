@@ -8,6 +8,20 @@
   </head>
   <body>
 
+    <section class="container">
+
+      <form data-bind="submit: getGif">
+        <input type="text" placeholder="Search Term" data-bind="textInput: searchTerm"/>
+        <button type="submit"  class="btn btn-primary">GO</button>
+      </form>
+
+    </section>
+
+    <!-- This is where the gif will be displayed -->
+    <section class="container">
+      <iframe  class="gif-display" src="" frameBorder="0" width="480" height="480"></iframe>
+    </section>
+
 
     <!-- Scripts -->
     <script src="static/lib/jquery-3.2.1.js"></script>
